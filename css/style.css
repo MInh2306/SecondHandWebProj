@@ -38,6 +38,9 @@ img{
 }
 
 /* -----------------------Main Page-------------------------------- */
-.gridPrduct{
+.mainpage-content{
+    background-color: aquamarine;
+}
+.gridProduct{
     background-color: aquamarine;
 }

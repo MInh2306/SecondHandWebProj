@@ -71,8 +71,8 @@ $row = $rs->fetch_assoc(); //lấy dòng đầu tiên của bảng vừa query r
             </ul>
         </nav>
     </header><!--đây là phần header gồm có navigation-->
-
-    <div class="mainpage-content wrapper">
+    <main>
+    <div class="gridProduct wrapper">
         <!-- ở đây để hiển thị những gì đã được lưu trong sever -->  
         <div class="item">
             <!-- <img src="img/xemay.jpg" alt=""> -->
@@ -89,6 +89,9 @@ $row = $rs->fetch_assoc(); //lấy dòng đầu tiên của bảng vừa query r
         </div>
 
     </div> <!--main-content-->
+    </main>
+
+    
 
 
     <footer>
