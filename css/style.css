@@ -38,6 +38,6 @@ img{
 }
 
 /* -----------------------Main Page-------------------------------- */
-.grid{
-    display: flex;
+.gridPrduct{
+    background-color: aquamarine;
 }
