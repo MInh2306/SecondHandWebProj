@@ -4,21 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Add some basic styling to improve appearance */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical; /* Allow vertical resizing of textarea */
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
     <form action="item_save.php" method="post">
 
         <label for="item_name">Ten san pham</label>
-        <input type="text" id="item_name" name="item_name" placeholder="nhập tên sản phẩm"><br>
+        <input type="text" id="item_name" name="item_name" placeholder="Nhập tên sản phẩm"><br>
 
         <label for="item_price">Gia san pham</label>
-        <input type="text" id="item_price" name="item_price" placeholder="nhập giá sản phẩm"><br>
+        <input type="text" id="item_price" name="item_price" placeholder="Nhập giá sản phẩm"><br>
 
         <label for="item_detail">Mô tả san pham</label>
-        <input type="text" id="item_detail" name="item_detail" placeholder="mô tả sản phẩm"><br>
+        <textarea id="item_detail" name="item_detail" placeholder="Mô tả sản phẩm"></textarea><br>
 
         <input type="submit" name="a" value="Gửi" />
         <input type="reset" value="Xóa" />

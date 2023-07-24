@@ -15,8 +15,8 @@
   if ($row){ //nếu có kq trả về (tức là uid và upass đúng)
     //print_r($row); //受け取ったデータ（配列）を表示して、内容を確認するー＞デバッグ時
     //echo '<h2>ログイン成功！'. $row['uname'] . 'さん</h2>';
-    header('Location: mainpage.html');// chuyển đến trang mainpage\
-    //header('Location: mainpage.php');
+    //header('Location: main_page.html');// chuyển đến trang mainpage\
+    header('Location: main_page.php');
   }else{
     echo '<h2>ログイン失敗！ユーザIDもしくはパスワードが間違いました！</h2>';
     echo '<a href="index.html">戻る</a>';

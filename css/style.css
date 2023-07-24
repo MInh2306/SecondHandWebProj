@@ -14,6 +14,10 @@ a{
 img{
     max-width: 100%;
 }
+.logo{
+    width: 210px;
+    margin-top: 14px;
+}
 
 /* -----------------------HEADER-------------------------------- */
 .page-header{
@@ -37,10 +41,14 @@ img{
     padding: 0 4%;
 }
 
-/* -----------------------Main Page-------------------------------- */
-.mainpage-content{
-    background-color: aquamarine;
+/* FOOTER */
+footer{
+    background: #432;
+    text-align: center;
+    padding: 26px 0;
 }
-.gridProduct{
-    background-color: aquamarine;
+
+footer p{
+    color: #fff;
+    font-size: 0.875rem;
 }

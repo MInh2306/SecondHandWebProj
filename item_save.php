@@ -22,4 +22,5 @@ $rs = $conn->query($sql); //SQL文をサーバーに送信し実行
 ?>
 
 <h1>đã cập nhật xong</h1>
-<a href="mainpage.php">quay lại</a>
+<!-- <a href="main_page.html">quay lại</a> -->
+<a href="main_page.php">quay lại</a>

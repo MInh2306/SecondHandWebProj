@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mainpage_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/item.css">
+    <link rel="stylesheet" href="css/item.css">
+    <title>Main page test</title>
+</head>
+
+<body>
+    <header class="page-header wrapper">
+        <form action="">
+            <!----searching bar-->
+            <input type="text" id="search" name="search-key">
+            <input type="submit" id="submit" name="search">
+        </form>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="item_upload.html">đăng bài</a></li>
+                <li><a href="#">trang cá nhân</a></li>
+                <li><a href="#">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content wrapper">
+        <div class="item">
+            <div class="picture">
+                <img src="img/xemay.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="decrible">
+                <p>Tên sản phẩm</p>
+                <p>Giá sản phẩm</p>
+                <!-- <p>Mô tả sản phẩm</p> -->
+            </div>
+            <form action="item_detail.php" method="post">
+                <input type="hidden" name="item_id" value="giá_trị_item_id_của_bạn" />
+                <input type="submit" name="a" value="buy" />
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        đây là footer
+    </footer>
+</body>
+
+</html>

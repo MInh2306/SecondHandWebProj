@@ -1,0 +1,27 @@
+/* TRANG NÀY DÙNG CHO TRANG MAIN_PAGE.PHP */
+.item-detail{
+    display: flex;  
+    justify-content: space-between;
+}
+
+img{
+    width: 400px;
+    height: 600px;
+}
+
+
+.itemdetail-image{
+    width: 50%;
+    border: 1px solid;
+}
+
+.itemdetail-decrible{
+    width: 50%;
+    border: 1px solid;
+    display: block;
+    justify-content: end;
+}
+
+ul{
+    list-style: none;
+}
