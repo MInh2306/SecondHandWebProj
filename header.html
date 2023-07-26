@@ -1,0 +1,17 @@
+<header class="page-header wrapper">
+    <h1><a href="main_page.php">Logo</a></h1>
+    <form action="">
+        <!----searching bar-->
+        <input type="text" id="search" name="search-key">
+        <input type="submit" id="submit" name="search">
+    </form>
+    <nav>
+        <ul class="main-nav">
+            <li><a href="item_upload.html">đăng bài</a></li>
+            <li><a href="user_page.php">trang cá nhân của
+                    <?php echo $_SESSION['uname'] ?>
+                </a></li>
+            <li><a href="logout.php">logout</a></li>
+        </ul>
+    </nav>
+</header>

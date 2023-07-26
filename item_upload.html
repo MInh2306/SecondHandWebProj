@@ -42,7 +42,8 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            resize: vertical; /* Allow vertical resizing of textarea */
+            resize: vertical;
+            /* Allow vertical resizing of textarea */
         }
 
         input[type="submit"],
@@ -60,7 +61,7 @@
 </head>
 
 <body>
-    <form action="item_save.php" method="post">
+    <form action="item_save.php" method="post" enctype="multipart/form-data">
 
         <label for="item_name">Ten san pham</label>
         <input type="text" id="item_name" name="item_name" placeholder="Nhập tên sản phẩm"><br>
@@ -71,6 +72,9 @@
         <label for="item_detail">Mô tả san pham</label>
         <textarea id="item_detail" name="item_detail" placeholder="Mô tả sản phẩm"></textarea><br>
 
+        <!-- upload file -->
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        
         <input type="submit" name="a" value="Gửi" />
         <input type="reset" value="Xóa" />
     </form>

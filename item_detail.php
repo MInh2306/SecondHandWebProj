@@ -1,4 +1,5 @@
 <?php
+session_start();
 //print_r($_POST);
 $id = $_POST['item_id']; //id nhận từ trang main-page
 $sql = "SELECT * FROM `item3` WHERE item_id = '{$id}'";
@@ -29,25 +30,14 @@ print_r($row);
 </head>
 
 <body>
-    <header class="page-header wrapper">
-        <h1><a href="main_page.php">Logo</a></h1>
-        <form action="">
-            <!----searching bar-->
-            <input type="text" id="search" name="search-key">
-            <input type="submit" id="submit" name="search">
-        </form>
-        <nav>
-            <ul class="main-nav">
-                <li><a href="item_upload.html">đăng bài</a></li>
-                <li><a href="#">trang cá nhân</a></li>
-                <li><a href="#">logout</a></li>
-            </ul>
-        </nav>
-    </header> <!---header-->
+    
+    <?php
+    include("header.html");
+    ?>
 
     <div class="item-detail wrapper">
         <div class="itemdetail-image">
-            <img src="img/xemay2.jpg" alt="xemay">
+            <img src="uploads/<?php echo $row['item_img']?>" alt="không có ảnh" >
         </div>
 
         <div class="itemdetail-decrible">
