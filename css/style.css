@@ -1,30 +1,72 @@
 /* -----------------------共通部分-------------------------------- */
 
-html{
+html {
     font-size: 100%;
 }
-body{
-    font-family:  "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     line-height: 1.7;
     color: #432;
 }
-a{
+
+a {
     text-decoration: none;
 }
-img{
+
+img {
     max-width: 100%;
 }
-.logo{
+
+.logo {
     width: 210px;
     margin-top: 14px;
 }
 
-/* -----------------------HEADER-------------------------------- */
-.page-header{
-    display: flex;
-    justify-content: space-between;
+/* -------------------------INDEX PAGE ---------------------------------*/
+.home-content {
+    text-align: center;
+    margin-top: 0%;
 }
-.main-nav{
+
+.home-content p {
+    font-size: 1.5rem;
+    margin: 10px 0px 42px;
+    color: beige;
+}
+
+/* 見出し */
+.page-title {
+    font-size: 5rem;
+    font-family: 'Philosopher', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #fff;
+}
+
+/* ボタン */
+.button {
+    font-size: 1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 50px;
+    padding: 18px 32px;
+}
+
+.button:hover {
+    background: #0090aa;
+}
+
+#home {
+    background-image: url(/SecondHandWebProj/img/index-bg.jpg);
+    min-height: 100vh;
+}
+
+#home .page-title {
+    text-transform: none;
+}
+
+.main-nav {
     display: flex;
     font-size: 1.25rem;
     text-transform: uppercase;
@@ -32,23 +74,155 @@ img{
     list-style: none;
 }
 
-.main-nav li{
+.main-nav li {
     margin-left: 36px;
 }
-.wrapper{
+
+/* -----------------------HEADER-------------------------------- */
+.wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 4%;
 }
 
+/* HEADER-CHATGPT */
+/* Style the header */
+.page-header {
+    background-color:beige;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+.page-header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.page-header form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.page-header input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.page-header input[type="submit"] {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.page-header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.page-header nav ul li {
+    margin-right: 20px;
+}
+
+.page-header nav ul li a {
+    color: rgb(111, 82, 82);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.page-header nav ul li a:hover {
+    color: #ff6600;
+}
+
+
 /* FOOTER */
-footer{
+footer {
     background: #432;
     text-align: center;
     padding: 26px 0;
 }
 
-footer p{
+footer p {
     color: #fff;
     font-size: 0.875rem;
+}
+
+/* MAIN PAGE */
+.main-content {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+
+/* TRANG NÀY DÙNG CHO TRANG MAIN_PAGE.PHP */
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.itemdetail-image {
+    width: 50%;
+    border: 1px solid;
+}
+
+.itemdetail-decrible {
+    width: 50%;
+    border: 1px solid;
+    display: block;
+    justify-content: end;
+}
+
+ul {
+    list-style: none;
+}
+
+/* DESIGN CÁC Ô ITEM */
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.item img {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+/* ITEM_DETAIL.PHP */
+.item-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-detail img{
+    width: 300px;
+    height: 250px;
 }

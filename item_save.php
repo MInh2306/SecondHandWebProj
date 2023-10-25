@@ -12,6 +12,7 @@ $item_detail = $_POST['item_detail'];
 
 //sử dụng biến session để thêm tên ngừi đăng
 $upload_user = $_SESSION['uname'];
+$upload_uid = $_SESSION['uid'];
 
 //xử lý upload ảnh
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["fileToUpload"])) {
@@ -53,24 +54,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["fileToUpload"])) {
     echo "Xin lỗi, bạn cần tải lên một tệp.";
 }
 
+if ($uploadOk == 0) {
+    echo "Xin lỗi, đăng bài không thành công";
+} else {
+    // Lấy tên tệp ảnh vừa tải lên
+    $item_img = $_FILES["fileToUpload"]["name"];
 
-// Lấy tên tệp ảnh vừa tải lên
-$item_img = $_FILES["fileToUpload"]["name"];
+    // Thêm tên tệp ảnh và thông tin vào cơ sở dữ liệu
+    $sql = "INSERT INTO item3 (item_name, item_price, item_detail, upload_user, uid,item_img)
+    VALUES('{$item_name}', {$item_price}, '{$item_detail}', '{$upload_user}','{$upload_uid}','{$item_img}');";
 
-// Thêm tên tệp ảnh và thông tin vào cơ sở dữ liệu
-$sql = "INSERT INTO item3 (item_name, item_price, item_detail, upload_user,item_img)
-VALUES('{$item_name}', {$item_price}, '{$item_detail}', '{$upload_user}','{$item_img}');";
+    //tạo connect tới sever 
+    $conn = new mysqli("localhost", "root", "", "secondhand");
+    if ($conn->connect_errno) {
+        die($conn->connect_error);
+    }
+    $rs = $conn->query($sql); //SQL文をサーバーに送信し実行
 
-//tạo connect tới sever 
-$conn = new mysqli("localhost", "root", "", "secondhand");
-if ($conn->connect_errno) {
-    die($conn->connect_error);
+
 }
 
-//chạy lệnh sql trên sever qua biến/cổng connect
-$rs = $conn->query($sql); //SQL文をサーバーに送信し実行
-//lấy giá trị và sử dụng (optional)
-//$row = $rs->fetch_assoc(); //問合せ結果を1行受け取る
 
 ?>
 

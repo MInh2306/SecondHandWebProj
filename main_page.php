@@ -4,7 +4,8 @@ session_start();
 
 <?php
 //print_r($_POST);//配列の要素を再帰的に出力（要素が配列の場合でもOK）
-$sql = "SELECT * FROM `item3`"; //tạo câu lệnh sql 
+//$sql = "SELECT * FROM `item3`"; //tạo câu lệnh sql 
+$sql = "SELECT * FROM `item3` WHERE item_id NOT IN (SELECT item_id FROM buy_history_v2);";
 $conn = new mysqli("localhost", "root", "", "secondhand"); //tạo kết nối
 if ($conn->connect_errno) {
   die($conn->connect_error);
@@ -23,15 +24,11 @@ $row = $rs->fetch_assoc(); //問合せ結果を1行受け取る
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/mainpage_style.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/item.css">
   <title>Main page</title>
 </head>
 
 <body>
-
-
   <?php
   if (isset($_SESSION['uid'])) {
     include("header.html");
@@ -39,7 +36,7 @@ $row = $rs->fetch_assoc(); //問合せ結果を1行受け取る
     while ($row) {
       echo '<div class="item">';
       echo '    <div class="picture">';
-      echo '        <img src="uploads/'.$row['item_img'].'" alt="không có ảnh" width="100" height="100">';
+      echo '        <img src="uploads/' . $row['item_img'] . '" alt="không có ảnh" width="100" height="100">';
       echo '    </div>';
       echo '    <div class="decrible">';
       echo '        <p>ID sản phẩm: ' . $row['item_id'] . '</p>';
@@ -51,6 +48,9 @@ $row = $rs->fetch_assoc(); //問合せ結果を1行受け取る
       echo '        <input type="hidden" name="item_id" value="' . $row['item_id'] . '" />';
       echo '        <input class="btn" type="submit" name="a" value="Detail" />';
       echo '    </form>';
+      echo '    <div class="like-button">';
+      echo '        <p>like</p>';
+      echo '    </div>';
       echo '</div>'; //item
       $row = $rs->fetch_assoc();
     }
@@ -62,10 +62,9 @@ $row = $rs->fetch_assoc(); //問合せ結果を1行受け取る
 
   ?>
 
-
-  <footer>
-    đây là footer
-  </footer>
+  <?php
+  include("footer.html");
+  ?>
 </body>
 
 </html>

@@ -18,17 +18,16 @@ $row = $rs->fetch_assoc(); //問合せ結果を1行受け取る
 
 //check xem pass và user đúng không
 if ($row) { //nếu có kq trả về (tức là uid và upass đúng)
-  //print_r($row); //受け取ったデータ（配列）を表示して、内容を確認するー＞デバッグ時
-  //echo '<h2>ログイン成功！'. $row['uname'] . 'さん</h2>';
-  //header('Location: main_page.html');// chuyển đến trang mainpage\
+
+  // chuyển đến trang mainpage
   header('Location: main_page.php');
+  
   //tạo biến session để có thể sử dụng được ở hết tất cả các trang 
   $_SESSION['uid'] = $row['uid']; //$_SESSION['key'] = value;
-  $_SESSION['upass'] = $row['upass'];
   $_SESSION['uname'] = $row['uname'];
   
 } else {
   echo '<h2>ログイン失敗！ユーザIDもしくはパスワードが間違いました！</h2>';
-  echo '<a href="index.html">戻る</a>';
+  echo '<a href="login_page.html">戻る</a>';
 }
 ?>

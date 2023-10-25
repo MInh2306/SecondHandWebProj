@@ -1,16 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Main page</title>
+</head>
+
 <header class="page-header wrapper">
-    <h1><a href="main_page.php">Logo</a></h1>
-    <form action="">
+    <h1><a href="main_page.php"><img class="logo" src="/SecondHandWebProj/img/market.svg" alt="WCBカフェホーム"></a></h1>
+
+    <form action="search_page.php" method="post">
         <!----searching bar-->
-        <input type="text" id="search" name="search-key">
+        <input type="text" id="search" name="search_key">
         <input type="submit" id="submit" name="search">
     </form>
+
     <nav>
-        <ul class="main-nav">
+        <ul class="main-page-nav">
             <li><a href="item_upload.html">đăng bài</a></li>
             <li><a href="user_page.php">trang cá nhân của
                     <?php echo $_SESSION['uname'] ?>
                 </a></li>
+            <!-- <li><a href="user_page.php"><img class="nav-logo" src="/SecondHandWebProj/img/user-nav-logo.svg" alt="WCBカフェホーム"></a></li> -->
             <li><a href="logout.php">logout</a></li>
         </ul>
     </nav>

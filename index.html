@@ -1,52 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="jp">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web bán đồ cũ cho học sinh</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
+    <meta name="description" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ">
+    <link rel="icon" type="image/png" href="images/logo.svg">
+    <title>KSU 2Hand</title>
 
-        h1 {
-            color: #007bff;
-        }
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-        p {
-            color: #444;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .login-btn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .login-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
-
 <body>
-    <h1>Chào mừng đến với trang web bán đồ cũ dành cho học sinh!</h1>
-    <p>
-        Hãy tham gia cùng chúng tôi và trải nghiệm môi trường mua bán đơn giản, tiện lợi và an toàn. Để bắt đầu, vui
-        lòng đăng nhập hoặc tạo tài khoản nếu bạn chưa có.
-    </p>
-
-    <a href="login.html" class="login-btn">Đăng nhập</a>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <h1><a href="index.html"><img class="logo" src="/SecondHandWebProj/img/market.svg" alt="WCBカフェホーム"></a></h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <div class="home-content wrapper">
+            <h2 class="page-title">Sell anything...</h2>
+            <p>one man's trash is another man's treasure</p>
+            <a class="button" href="login_page.html">Login and Go</a>
+        </div>  <!--home-content---> 
+    </div>  
 </body>
-
 </html>

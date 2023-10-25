@@ -12,7 +12,7 @@ session_destroy();
 
 <body>
     <h3>ログアウトしました！</h3>
-    <a href="login.html">トップページ</a>
+    <a href="login_page.html">トップページ</a>
 </body>
 
 </html>
